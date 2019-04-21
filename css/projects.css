@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "MontserratExtraBold";
+  src: local("Montserrat-ExtraBold"), local("Montserrat ExtraBold"), url(../fonts/Montserrat-ExtraBold.woff2) format("woff2"), url(../fonts/Montserrat-ExtraBold.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #9B1414;
+  color: white;
+  font: 300 1.2rem Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  padding: 1em 1em 5em 1em;
+}
+
+main .heading {
+  font: 800 3rem MontserratExtraBold, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+@media screen and (max-width: 680px) {
+  main .heading {
+    font-size: 2rem;
+  }
+}
+
+main .sub-heading {
+  font: 800 2rem MontserratExtraBold, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 680px) {
+  main .sub-heading {
+    font-size: 1.6rem;
+  }
+}
+
+main a {
+  color: white;
+  text-decoration: underline;
+}
+
+main a:active, main a:focus, main a:hover {
+  color: #bfbfbf;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0em 1em 0em;
+  background-color: #641414;
+}
+
+header .logo-small {
+  height: 2.5em;
+}
+
+header .logo-small svg {
+  height: 2.5em;
+  fill: white;
+}
+
+header nav {
+  font: 400 1.2rem Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+}
+
+header nav a {
+  background-color: #641414;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  text-align: center;
+  display: inline-block;
+}
+
+header nav a.current {
+  background-color: #9B1414;
+}
+
+header nav a:active.current, header nav a:focus.current, header nav a:hover.current {
+  background-color: #841111;
+}
+
+header nav a:active:not(.current), header nav a:focus:not(.current), header nav a:hover:not(.current) {
+  background-color: #4f1010;
+}
+
+header nav #menuButton {
+  position: absolute;
+  left: -300em;
+}
+
+@media screen and (max-width: 680px) {
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    display: none;
+    margin-bottom: 5px;
+  }
+  header nav #menuButton + label {
+    float: right;
+    content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M24,6H0V2h24V6z M24,10H0v4h24V10z M24,18H0v4h24V18z'/%3E%3C/svg%3E");
+    height: 1.2em;
+    padding: 1em;
+  }
+  header nav #menuButton + label:after {
+    content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M24,6H0V2h24V6z M24,10H0v4h24V10z M24,18H0v4h24V18z'/%3E%3C/svg%3E");
+    height: 1.2em;
+    padding: 1em;
+  }
+  header nav #menuButton + label::-moz-selection {
+    background-color: transparent;
+  }
+  header nav #menuButton + label::selection {
+    background-color: transparent;
+  }
+  header nav #menuButton:checked ~ ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav #menuButton + label:active, header nav #menuButton + label:focus {
+    background-color: #4f1010;
+  }
+  header nav a {
+    display: block;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font: 300 0.8rem Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+footer p {
+  padding: 0em 1em 0em;
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cards .cards-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  width: 25%;
+}
+
+@media screen and (max-width: 1920px) {
+  .cards .cards-item {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .cards .cards-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .cards .cards-item {
+    width: 100%;
+  }
+}
+
+.cards .cards-item .card {
+  background-color: white;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.cards .cards-item .card .card-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  padding-top: 66.6666%;
+}
+
+.cards .cards-item .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.8em;
+}
+
+.cards .cards-item .card .card-content .card-headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .cards-item .card .card-content .card-headline .card-title {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  font: 300 1.2rem Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cards .cards-item .card .card-content .card-headline .card-title a {
+  color: #787878;
+  text-decoration: none;
+}
+
+.cards .cards-item .card .card-content .card-headline .right-icons {
+  text-align: right;
+}
+
+.cards .cards-item .card .card-content .card-headline .dev-icon {
+  height: 1.2rem;
+  vertical-align: text-top;
+  fill: #787878;
+}
+
+.cards .cards-item .card .card-content .card-meta {
+  color: #A0A0A0;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cards .cards-item .card .card-content .card-text {
+  color: #787878;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-size: 1rem;
+}
+
+.cards .cards-item .card .card-content .btn {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #A0A0A0;
+  padding: 0.5rem;
+}
+
+.cards .cards-item .card .card-content .btn a {
+  color: #787878;
+  text-decoration: none;
+}
+
+.card-image--homepage {
+  background-image: url("../images/projects/sai-kiran-anagani-61187-unsplash--600-c.jpg");
+}
+
+@media screen and (min-width: 2560px) {
+  .card-image--homepage {
+    background-image: url("../images/projects/sai-kiran-anagani-61187-unsplash--900-c.jpg");
+  }
+}
+
+@media screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.875), screen and (min-width: 1280px) and (min-resolution: 180dpi), screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) {
+  .card-image--homepage {
+    background-image: url("../images/projects/sai-kiran-anagani-61187-unsplash--900-c.jpg");
+  }
+}
+/*# sourceMappingURL=projects.css.map */

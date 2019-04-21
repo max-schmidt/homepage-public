@@ -1,0 +1,110 @@
+@import '_variables';
+@import '_mixins';
+@import '_style';
+@import '_header';
+@import '_footer';
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .cards-item {
+        box-sizing: border-box;
+        display: flex;
+        padding: 1em;
+
+        //4 cards in a row for widescreen (4k) monitors, 3 for pc, 2 for tablet, 1 for mobile
+        width: 25%;
+        @media screen and (max-width: $break-widescreen) {
+            width: 33.3333%;
+        }
+        @media screen and (max-width: $break-tablet) {
+            width: 50%;
+        }        
+        @media screen and (max-width: $break-mobile) {
+            width: 100%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.25em;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .card-image {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 0.25em;
+                border-top-right-radius: 0.25em;
+                padding-top: 66.6666%; // 3:2 aspect ratio
+            }       
+            //card images are at the end
+            
+            .card-content {
+                display: flex;
+                flex: auto;
+                flex-direction: column;
+                padding: 0.8em;
+
+                .card-headline {
+                    display: flex;
+                    justify-content: space-between;
+            
+                    .card-title {
+                        //prefer shrink title text instead of dev-icons
+                        flex-shrink: 2;
+                        font: $primary-font;
+                        letter-spacing: 1px;
+                        margin: 0;
+                        text-transform: uppercase;
+            
+                        a {
+                            color: $grey-dark;
+                            text-decoration: none;
+                        }
+                    }
+             
+                    //span with dev-icons right-aligned
+                    .right-icons {
+                        text-align: right;
+                    }
+            
+                    .dev-icon {
+                        height: 1.2rem;
+                        vertical-align: text-top;
+                        fill: $grey-dark;
+                    }
+                }
+                
+                .card-meta {
+                    color: $grey-light;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            
+                .card-text {
+                    color: $grey-dark;
+                    flex: auto;
+                    font-size: 1rem;
+                }
+                
+                .btn {
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid $grey-light;
+                    padding: 0.5rem;
+                    a {
+                        color: $grey-dark;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//thumbnail images
+.card-image--homepage {@include webthumb(projects/sai-kiran-anagani-61187-unsplash);}

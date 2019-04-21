@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="theme-color" content="#9B1414">
+        <link rel="stylesheet" href="css/photos.css">
+        <meta name="author" content="Martin Smith">
+        <meta name="description" content="Martin Smith Personal Homepage">
+        <title>Fotografie - example.org</title>
+        <!-- Icons -->
+        <!-- For old IE create favicon.ico with 16x16, 32x32 in root directory but do not declare here-->
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <!-- Chrome Touch Icon 192x192-->
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+        <!-- Apple Touch Icon 180x180-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <!-- Logo -->
+                <a class="logo-small" href="/" title="Home"><span><svg viewBox="0 0 128 128"> <use href="#m-logo" xlink:href="#m-logo"/></svg></span></a>
+                <!-- Navigation -->
+                <nav>
+                    <input type="checkbox" id="menuButton"> <label for="menuButton"></label>
+                    <ul>
+                        <li><a href="/">About Me</a></li>
+                        <li><a href="page.html">Page</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a class="current" href="photos.html">Fotografie</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+            <main>   
+                <h1 class="heading">Fotografie</h1>
+                <section class="cards">
+                    <article class="cards-item"> 
+                        <div class="card">                            
+                            <a href="#photo-001"><div class="card-image card-image--photo-001"><!--Image--></div></a>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <span>
+                                        <span class="left-text"><svg class="icon" viewBox="0 0 24 24"> <title>Ort</title> <use href="#location" xlink:href="#location"/></svg> Magdeburg </span>
+                                        <span class="left-text"><svg class="icon" viewBox="0 0 24 24"> <title>Datum</title> <use href="#calendar" xlink:href="#calendar"/></svg> November 2018 </span>
+                                    </span>
+                                    <span class="right-text">
+                                        <a title="Creative Commons Namensnennung 4.0 International Lizenz" target="_blank" rel="noopener noreferrer license" href="https://creativecommons.org/licenses/by/4.0/">
+                                            <svg class="icon" viewBox="0 0 144 64"> <title>Creative Commons Namensnennung 4.0 International Lizenz</title> <use href="#cc-by-license" xlink:href="#cc-by-license"/></svg>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>               
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <p class="copyright">&copy; 2019 by Maximilian Schmidt. <a href="legal.html" title="Legal Notice">More Information.</a></p>
+                <p class="footer-info">Designed by <a target="_blank" rel="noopener noreferrer" href="https://maximilianschmidt.net" title="maximilianschmidt.net">Maximilian Schmidt</a>.</p>
+            </footer>    
+        </div>
+
+        <!-- lightbox container hidden with CSS -->
+        <!-- anchor #close do not exist, so lightbox closes and page position remains  -->
+        <a href="#close" class="lightbox" id="photo-001"><div><!--Image--></div></a>
+
+        <!-- Embeded SVG Images -->
+        <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="m-logo" viewBox="0 0 128 128">
+                <path d="M64,8A56,56,0,1,1,8,64,56.06,56.06,0,0,1,64,8m0-8a64,64,0,1,0,64,64A64,64,0,0,0,64,0Z"/>
+                <path d="M49.52,34.76,64,65.29,78.48,34.76H99V93.24H82.06v-32L70.3,87.57H57.7L45.94,61.2v32H29V34.76Z"/>
+            </symbol> 
+
+            <symbol id="location" viewBox="0 0 24 24">
+                <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+            </symbol>
+
+            <symbol id="calendar" viewBox="0 0 24 24">
+                <path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z"/>
+            </symbol>
+
+            <symbol id="cc-by-license" viewBox="0 0 144 64">
+                <path d="M111.94,0a31,31,0,0,1,22.75,9.26A31,31,0,0,1,144,32q0,13.49-9.15,22.46A31.6,31.6,0,0,1,111.94,64a30.94,30.94,0,0,1-22.51-9.43A30.79,30.79,0,0,1,80,32,31.34,31.34,0,0,1,89.43,9.26,30.64,30.64,0,0,1,111.94,0Zm.12,5.77A24.9,24.9,0,0,0,93.6,13.43,25.73,25.73,0,0,0,85.77,32a25.14,25.14,0,0,0,7.77,18.4,25.28,25.28,0,0,0,18.52,7.77,25.66,25.66,0,0,0,18.62-7.83A24.37,24.37,0,0,0,138.23,32a25.29,25.29,0,0,0-7.66-18.57A25.2,25.2,0,0,0,112.06,5.77Zm8.57,18.29V37.14H117V52.68H107V37.14h-3.66V24.06A2,2,0,0,1,105.43,22h13.14a2,2,0,0,1,1.43.6A2,2,0,0,1,120.63,24.06Zm-13.09-8.23q0-4.51,4.46-4.51t4.46,4.51q0,4.46-4.46,4.46T107.54,15.83Z"/>
+                <path d="M31.94,0A31.23,31.23,0,0,1,54.8,9.37a30.87,30.87,0,0,1,6.86,10.32A32.56,32.56,0,0,1,64,32a32.64,32.64,0,0,1-2.31,12.31,29.53,29.53,0,0,1-6.83,10.15,33.09,33.09,0,0,1-10.63,7.08A31.84,31.84,0,0,1,31.94,64,31.14,31.14,0,0,1,19.8,61.57a32.15,32.15,0,0,1-10.4-7,31.73,31.73,0,0,1-7-10.37,31.95,31.95,0,0,1,0-24.37A32.09,32.09,0,0,1,9.49,9.31,30.26,30.26,0,0,1,31.94,0Zm.12,5.77A24.77,24.77,0,0,0,13.6,13.43,27.37,27.37,0,0,0,7.8,22a25.35,25.35,0,0,0,0,19.88A27.12,27.12,0,0,0,22.11,56.15a26,26,0,0,0,19.92,0,27.74,27.74,0,0,0,8.71-5.77A24.6,24.6,0,0,0,58.23,32a26.24,26.24,0,0,0-1.95-10.06,25.5,25.5,0,0,0-5.65-8.45A25.3,25.3,0,0,0,32.06,5.77Zm-.4,20.92-4.29,2.23a4.34,4.34,0,0,0-1.69-2,3.77,3.77,0,0,0-1.85-.58q-4.29,0-4.29,5.66a7,7,0,0,0,1.09,4.12,3.67,3.67,0,0,0,3.2,1.54,4,4,0,0,0,3.94-2.74l3.94,2a9.43,9.43,0,0,1-8.4,5,9.36,9.36,0,0,1-6.91-2.63A9.91,9.91,0,0,1,13.77,32a9.85,9.85,0,0,1,2.66-7.25,9.05,9.05,0,0,1,6.71-2.69Q29.08,22.06,31.66,26.69Zm18.45,0-4.23,2.23a4.33,4.33,0,0,0-1.68-2,3.92,3.92,0,0,0-1.92-.58Q38,26.34,38,32a7.05,7.05,0,0,0,1.08,4.12,3.69,3.69,0,0,0,3.2,1.54,4,4,0,0,0,3.95-2.74l4,2a9.81,9.81,0,0,1-3.55,3.68A9.17,9.17,0,0,1,41.83,42a9.32,9.32,0,0,1-6.94-2.63A9.94,9.94,0,0,1,32.28,32a9.85,9.85,0,0,1,2.66-7.25,9.06,9.06,0,0,1,6.72-2.69Q47.6,22.06,50.11,26.69Z"/>
+            </symbol>
+        </svg>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+//Colors
+$primary-color: #9B1414;
+$dark-color: #641414;
+$grey-dark: #787878;
+$grey-light: #A0A0A0;
+$text-color: white;
+
+//Fonts
+@font-face {
+	font-family: "MontserratExtraBold";
+	src: 
+		local("Montserrat-ExtraBold"),
+		local("Montserrat ExtraBold"),
+		url(../fonts/Montserrat-ExtraBold.woff2) format("woff2"),
+		url(../fonts/Montserrat-ExtraBold.woff) format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+$standard-font-family: Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+
+$nav-font: 400 1.2rem $standard-font-family;
+$name-font: 800 5rem MontserratExtraBold, $standard-font-family;
+$header-font: 800 3rem MontserratExtraBold, $standard-font-family;
+$sub-header-font: 800 2rem MontserratExtraBold, $standard-font-family;
+$primary-font: 300 1.2rem $standard-font-family;
+$foot-font: 300 0.8rem $standard-font-family;
+
+//Measures
+$break-widescreen: 1920px;
+$break-tablet: 1080px;
+$break-mobile: 680px;

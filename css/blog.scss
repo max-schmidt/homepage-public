@@ -1,0 +1,69 @@
+@import '_variables';
+@import '_mixins';
+@import '_style';
+@import '_header';
+@import '_footer';
+
+main {   
+    .content {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: row;
+        width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (max-width: $break-tablet) {
+            width: 100%;
+        }
+        //put the sidenav at the end
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+            margin-top: 0;
+        }
+        
+        .posts {
+            flex: 4;
+            .post-on-list {
+                margin: 1.5em 0;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .post-meta {
+                    font-style: italic;
+                    font-size: 1rem;
+                    margin-bottom: 0.5em;
+                }
+
+                .post-content {
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+
+        .sidenav {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            @media screen and (max-width: $break-mobile) {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-top: 0.5em; 
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin: 0.25em;
+                margin-left: 0;
+            }
+
+            p {
+                margin: 0.25em;
+            }
+        }
+    }
+}

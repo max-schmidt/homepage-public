@@ -1,0 +1,29 @@
+//Tumbnails (values based on screen width)
+@mixin webthumb($file) {
+    background-image: url('../images/'+$file+'--600-c.jpg');
+
+    @media screen and (min-width: 2560px) {
+        background-image: url('../images/'+$file+'--900-c.jpg');
+    }
+    // For High DPI
+    @media 
+    screen and (min-width: 1280px) and (min-resolution: 180dpi),
+    screen and (min-width: 1280px) and (min-device-pixel-ratio: 2) {
+        background-image: url('../images/'+$file+'--900-c.jpg');
+    }
+}
+
+//Full-width Images (values based on image size)
+@mixin webimage($file) {
+    background-image: url('../images/'+$file+'--1500-c.jpg');
+
+    @media screen and (min-width: 1500px) {
+        background-image: url('../images/'+$file+'--3000-c.jpg');
+    }
+    // For High DPI
+    @media 
+    screen and (min-width: 1000px) and (min-resolution: 180dpi),
+    screen and (min-width: 1000px) and (min-device-pixel-ratio: 2) {
+        background-image: url('../images/'+$file+'--3000-c.jpg');
+    }
+}

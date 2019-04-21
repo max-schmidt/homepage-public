@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: $primary-color;
+    color: $text-color;
+    font: $primary-font;
+}
+
+//helper class for footer
+.container {
+    min-height: 100%;
+    position: relative;
+    align-items: center;
+}
+
+main {
+    padding: 1em 1em 5em 1em;
+
+    .heading {
+        font: $header-font;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 0.25em;
+        @media screen and (max-width: $break-mobile) {
+            font-size: 2rem;
+        }
+    }
+
+    .sub-heading {
+        font: $sub-header-font;
+        line-height: 1;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        @media screen and (max-width: $break-mobile) {
+            font-size: 1.6rem;
+        }       
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+    
+    a:active, a:focus, a:hover {
+        color: darken($text-color, $amount: 25%);
+    }
+}

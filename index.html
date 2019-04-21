@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="theme-color" content="#9B1414">
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="author" content="Martin Smith">
+        <meta name="description" content="Martin Smith Personal Homepage">
+        <title>Home - example.org</title>
+        <!-- Icons -->
+        <!-- For old IE create favicon.ico with 16x16, 32x32 in root directory but do not declare here-->
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <!-- Chrome Touch Icon 192x192-->
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+        <!-- Apple Touch Icon 180x180-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <!-- Logo -->
+                <a class="logo-small" href="/" title="Home"><span><svg viewBox="0 0 128 128"> <use href="#m-logo" xlink:href="#m-logo"/></svg></span></a>
+                <!-- Navigation -->
+                <nav>
+                    <input type="checkbox" id="menuButton"> <label for="menuButton"></label>
+                    <ul>
+                        <li><a class="current" href="/">About Me</a></li>
+                        <li><a href="page.html">Page</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a href="photos.html">Fotografie</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+            <main>   
+                <div class="about-left">
+                    <!-- Logo / Portrait -->
+                    <svg class="logo-big" viewBox="0 0 128 128"> <use href="#m-logo" xlink:href="#m-logo"/></svg>
+                </div>
+                <div class="about-right">
+                    <!-- Name Headline -->
+                    <h1 class="about-name">Martin Smith</h1>
+                    <!-- About Me Text -->
+                    <p class="about">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <!-- Social Links -->
+                    <p>
+                        <a class="social" href="mailto:email@example.org" title="E-Mail"><span><svg viewBox="0 0 24 18"> <use href="#email" xlink:href="#email"/></svg></span></a>
+                        <a class="social" target="_blank" rel="noopener noreferrer" href="https://github.com/" title="GitHub"><span><svg viewBox="0 0 24 23.4076"> <use href="#github" xlink:href="#github"/></svg></span></a>
+                    </p>
+                </div>   
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <p class="copyright">&copy; 2019 by Maximilian Schmidt. <a href="legal.html" title="Legal Notice">More Information.</a></p>
+                <p class="footer-info">Designed by <a target="_blank" rel="noopener noreferrer" href="https://maximilianschmidt.net" title="maximilianschmidt.net">Maximilian Schmidt</a>.</p>
+            </footer>    
+        </div>
+
+        <!-- Embeded SVG Images -->
+        <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="m-logo" viewBox="0 0 128 128">
+                <path d="M64,8A56,56,0,1,1,8,64,56.06,56.06,0,0,1,64,8m0-8a64,64,0,1,0,64,64A64,64,0,0,0,64,0Z"/>
+                <path d="M49.52,34.76,64,65.29,78.48,34.76H99V93.24H82.06v-32L70.3,87.57H57.7L45.94,61.2v32H29V34.76Z"/>
+            </symbol>
+
+            <symbol id="email" viewBox="0 0 24 18">
+                <title>E-Mail</title>
+                <path id="email-3" d="M12,12.7129.0146,3h23.97Zm0,2.5742L0,5.562V21H24V5.5625Z" transform="translate(0 -3)"/>
+            </symbol>
+            
+            <symbol id="github" viewBox="0 0 24 23.4076">
+                <title>GitHub</title>
+                <path id="github-1" fill-rule="evenodd" d="M12.0005,0a12.0012,12.0012,0,0,0-3.794,23.3867c.6.1113.7935-.26.7935-.5771V20.5752C5.6616,21.3013,4.9673,19.16,4.9673,19.16a3.1768,3.1768,0,0,0-1.3325-1.7559c-1.0889-.7451.0825-.73.0825-.73a2.5223,2.5223,0,0,1,1.8393,1.2368,2.5546,2.5546,0,0,0,3.4922.9971,2.5549,2.5549,0,0,1,.7617-1.6045c-2.6655-.3032-5.4672-1.3325-5.4672-5.93A4.6441,4.6441,0,0,1,5.58,8.1523a4.3134,4.3134,0,0,1,.1162-3.1757s1.0078-.3223,3.3008,1.23a11.3821,11.3821,0,0,1,6.01,0c2.2906-1.5522,3.2969-1.23,3.2969-1.23a4.3064,4.3064,0,0,1,.1177,3.1757,4.6345,4.6345,0,0,1,1.2349,3.2212c0,4.6089-2.8072,5.6236-5.4795,5.9209A2.8675,2.8675,0,0,1,15,19.5166V22.81c0,.3193.1924.6938.8008.5757A12.0018,12.0018,0,0,0,12.0005,0Z"/>
+            </symbol>   
+        </svg>    
+    </body>
+</html>

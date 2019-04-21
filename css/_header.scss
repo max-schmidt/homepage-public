@@ -1,0 +1,95 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1em 0em;
+    background-color: $dark-color;
+
+    .logo-small {
+        height: 2.5em;
+        svg {
+            height: 2.5em;
+            fill: white;
+        }
+    }
+
+    nav {
+        font: $nav-font;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+        }
+
+        a {
+            background-color: $dark-color;
+            color: $text-color;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            display: inline-block;
+        }
+
+        a.current {
+            background-color: $primary-color;
+        }
+
+        a:active.current, a:focus.current, a:hover.current {
+            background-color: darken($primary-color, $amount: 5%)
+        }
+
+        a:active:not(.current), a:focus:not(.current), a:hover:not(.current) {
+            background-color: darken($dark-color, $amount: 5%)
+        }
+
+        //hide mobile menu button
+        #menuButton {
+            position:absolute;
+            left:-300em; //out of screen
+        }
+        
+        //mobile menu
+        @media screen and (max-width: $break-mobile) {
+            width: 100%;
+            
+            ul {
+                display: none;
+                margin-bottom: 5px;
+            }
+
+            #menuButton + label {
+                float: right;
+                content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M24,6H0V2h24V6z M24,10H0v4h24V10z M24,18H0v4h24V18z'/%3E%3C/svg%3E");
+                height: 1.2em;
+                padding: 1em;
+            }
+
+            //fix for microsoft edge
+            #menuButton + label:after {
+                content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M24,6H0V2h24V6z M24,10H0v4h24V10z M24,18H0v4h24V18z'/%3E%3C/svg%3E");
+                height: 1.2em;
+                padding: 1em;
+            }
+
+            //fix highlighting selected button in firefox
+            #menuButton + label::selection {
+                background-color: transparent;
+            } 
+
+            #menuButton:checked ~ ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #menuButton + label:active, #menuButton + label:focus {
+                background-color: darken($dark-color, $amount: 5%);
+            }
+
+            a {
+                display: block;  
+            }
+        }
+    }
+}
